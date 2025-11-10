@@ -1,0 +1,406 @@
+body {
+margin:0;
+background-color: lightgray;
+}
+
+img:Hover {border:1px solid blue}
+
+.ad {
+display: block;
+margin: 0 270px;
+width:500px;
+}
+
+.gradient {
+background: rgb(143,156,239); /* Old browsers */
+/* IE9 SVG, needs conditional override of 'filter' to 'none' */
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzhmOWNlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjI0JSIgc3RvcC1jb2xvcj0iIzJhNTBlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjUwJSIgc3RvcC1jb2xvcj0iIzAwMDNkYiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc5JSIgc3RvcC1jb2xvcj0iIzJhNTBlYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2ODgwZWQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  rgba(143,156,239,1) 0%, rgba(42,80,234,1) 24%, rgba(0,3,219,1) 50%, rgba(42,80,234,1) 79%, rgba(104,128,237,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(143,156,239,1)), color-stop(24%,rgba(42,80,234,1)), color-stop(50%,rgba(0,3,219,1)), color-stop(79%,rgba(42,80,234,1)), color-stop(100%,rgba(104,128,237,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(143,156,239,1) 0%,rgba(42,80,234,1) 24%,rgba(0,3,219,1) 50%,rgba(42,80,234,1) 79%,rgba(104,128,237,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(143,156,239,1) 0%,rgba(42,80,234,1) 24%,rgba(0,3,219,1) 50%,rgba(42,80,234,1) 79%,rgba(104,128,237,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(143,156,239,1) 0%,rgba(42,80,234,1) 24%,rgba(0,3,219,1) 50%,rgba(42,80,234,1) 79%,rgba(104,128,237,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(143,156,239,1) 0%,rgba(42,80,234,1) 24%,rgba(0,3,219,1) 50%,rgba(42,80,234,1) 79%,rgba(104,128,237,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8f9cef', endColorstr='#6880ed',GradientType=0 ); /* IE6-8 */
+}
+
+#bg {
+position: absolute;
+z-index:-99;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+z-index: -100;
+/*opacity:0.7;*/
+}
+
+#shares {position:relative;z-index:-0}
+
+/******************************************* INDEX PAGE *******************************************/
+
+#title {
+position: relative;
+top: 0px;
+width: 700px;
+z-index: -50;
+margin: 30px 200px;
+display: block;
+padding-left: 50px;
+}
+
+#wecantoo {
+display: block;
+margin: 0 200px;
+width: 500px;
+}
+
+#audiobook {
+width: 200px;
+margin-left: 30px;
+position: absolute;
+bottom: 50px;
+z-index:-99;
+}
+
+.audiobook {
+width:132px;
+padding: 14px;
+/*border: 1px solid blue;*/
+}
+
+.audiobook:hover {width:3000px}
+
+#avatarbuilder {
+display: block;
+position: relative;
+margin: 0 200px;
+}
+
+#chatonline {
+position: relative;
+margin: 0 200px;
+display: block;
+}
+
+#frontalan {
+position:absolute;
+z-index:99;
+left: 484px;
+top: 290px;
+}
+
+#credit {
+background-color: rgb(2, 255, 235);
+position: absolute;
+bottom: 0px;
+width: 100%;
+text-align: center;
+height: 30px;
+z-index:-98;
+}
+
+/******************************************* NAVBAR *******************************************/
+
+#header {
+width: 100%;
+font-family: arial;
+font-weight: bold;
+color: black;
+height: 47px;
+padding: 0;
+}
+
+	#navtainer {
+		width: 1270px;
+		position: relative;
+		padding: 0;
+		margin: 0;
+	}
+
+	#navtainer ul {
+list-style-type: none;
+padding: 0;
+margin: 0 90px;
+height: 47px;
+position: absolute;
+background-color:lightgray;
+	}
+
+	#navtainer ul li {
+float: left;
+height: 47px;
+padding: 0;
+margin: 0;
+border-left: 1px solid gray;
+	}
+	
+	.righter {border-right:1px solid gray}
+
+	#navtainer ul li a {
+		margin: 0;
+		padding: 0 15px 0 15px;
+		line-height: 47px;
+		text-decoration: none;
+	}
+	
+	#navtainer ul li a:hover {color:white}
+	
+
+/******************************************* FORM *******************************************/
+
+#quizalan {
+position: fixed;
+z-index: 50;
+bottom: 0px;
+left: 395px;
+}
+
+.form {
+positoin:relative;
+z-index:99;
+color:blue;
+background-color:gray;
+}	
+
+.ss-form-title {
+display: block;
+background-color: lightgray;
+color: blue;
+text-transform: uppercase;
+font-style: italic;
+padding: 10px 30px;
+width: 900px;
+font-size: 50px;
+border: 10px double purple;
+position: relative;
+margin: 0 64px;
+text-align: center;
+}	
+
+.ss-form-desc {
+display: block;
+position: relative;
+padding: 10px 20px;
+margin: 0px 120px 50px;
+background: blue;
+width: 800px;
+color: white;
+text-transform: capitalize;
+font-size: 40px;
+text-align: center;
+font-style: italic;
+}
+	
+.ss-form-question {
+position: relative;
+margin: 0 275px;
+display: block;
+border-right: 2px solid black;
+border-bottom: 2px solid black;
+border-left: 2px solid white;
+border-top: 2px solid white;
+width: 500px;
+padding: 20px;
+margin-bottom: 30px;
+line-height: 29px;
+background-color: lightgray;
+box-shadow: 5px 5px blue;
+}
+
+.required-message {display:none}
+
+#ss-submit {
+margin: 0 430px 100px;
+display: block;
+font-size: 150px;
+box-shadow: 5px 5px 5px;
+padding: 20px;
+z-index: 999;
+position: relative;
+}
+
+/******************************************* YOUR AVATAR *******************************************/
+
+.youravatarheader {
+box-shadow: 10px 10px green!important;
+color: green!important;
+border: 2px solid green!important;
+}
+
+#ShowText {
+width: 50%;
+display: block;
+margin: 5% 200px;
+font-size: 25px;
+box-shadow: 5px 5px green!important;
+}
+	
+/******************************************* CHAT *******************************************/
+
+#allit {
+width: 624px;
+position: relative;
+margin: 50px 150px;
+}
+
+#ballalan {
+position: fixed;
+z-index: -90;
+right: -365px;
+bottom: -2px;
+}
+
+#teddy {
+margin: 0 auto;
+position: absolute;
+z-index: 99;
+margin-left: -250px;
+}
+
+#chatheader {
+display: block;
+margin: 0 200px;
+width: 600px;
+background-color: antiquewhite;
+padding: 10px;
+font-size: 50px;
+font-weight: bold;
+font-style: italic;
+text-align: center;
+color: blue;
+box-shadow: 10px 10px blue;
+border: 2px solid blue;
+}
+
+#grill:hover {border:none!important}
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.container {
+font-family: Palitino, serif;
+width: 600px;
+margin-left: 100px;
+padding: 50px 10px 100px;
+background-color: #ddd;
+border-right: 2px solid black;
+border-bottom: 2px solid black;
+border-left: 2px solid white;
+border-top: 2px solid white;
+box-shadow: 10px 10px 50px;
+}
+
+.title {
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "Courier New", Monospace;
+	text-shadow: #ccc 2px 2px 1px;
+	padding-bottom: 5px;
+}
+
+.chat {
+border-right: 4px double #ccc;
+border-bottom: 4px double #ccc;
+box-shadow: -2px -2px 0 #000;
+height: 200px;
+overflow-y: scroll;
+background-color: white;
+}
+
+.chat div {
+	margin: 10px 12px 15px;
+	line-height: 20px;
+}
+
+.chat .party {
+	font-weight: bold;
+}
+
+.chat .you {
+	color: red;
+}
+
+.chat .other {
+	color: blue;
+}
+
+.chat .text {
+	
+}
+
+.busy {
+	position: absolute;
+	padding: 3px 0;
+	color: #666;
+	display: none;
+	font-size: 11px;
+}
+
+.input {
+	margin-top: 20px;
+}
+
+.input input {
+vertical-align: top;
+float: left;
+border-right: 4px double #ccc;
+border-bottom: 4px double #ccc;
+box-shadow: -2px -2px 0 #000;
+width: 100%;
+overflow-y: scroll;
+background-color: white;
+font-family: serif!important;
+font-size: 13px;
+color: black!important;
+padding: 10px;
+border-top: none;
+border-left: none;
+}
+
+.input a {
+display: block;
+vertical-align: top;
+margin: 10px 2px;
+float: right;
+height: 75px;
+width: 75px;
+line-height: 75px;
+text-align: center;
+border: 1.5px solid #777;
+box-shadow: 2px 2px white;
+color: #777;
+font-family: monospace;
+font-weight: bold;
+text-shadow: 1px 1px white;
+text-decoration: none;
+}
+
+.input a:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}
+
+#sex {
+display:block;
+margin:0 auto;
+width:500px;
+}
+
+/******************************************* ETC *******************************************/
+
+#error {
+margin:100px 0;
+text-align:center;
+font-size:60px;
+font-weight:bold;
+}
+
+#gallery img {
+box-shadow: 30px 10px 20px #A29E9E;
+margin: 20px;
+}
+
