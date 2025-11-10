@@ -1,0 +1,155 @@
+<html>
+<head>
+
+<title>Congratulations You Are An Avatar</title>
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="img/youravataricon.png">
+
+<script type="text/javascript">
+var textarray = [
+ "SCORE: 15%:  You are a GREY SPIRIT (type-K).  You are a fun-loving person, but extremely rude in personal interactions. Physical touch is a real turn off for a type-k person like you. A perfect day for you is just going to a chill party. Your best quality is knowing when enough is enough. Your worst quality is that you drink dirty sink water. Your friends love you but you are too stupid to realize it so you hate them. ",
+ "SCORE: 2% (out of 100):  You are a CRYSTAL EGG (type-L) Crystal eggs are very cool, congratulations! You are really funny and people get a kick out of your jokes. You are seriously depressed, but it doesn't show. You say things like 'paradigm shift.' You are a perfectionist. You are extremely unskilled. You are poor. Everyone thinks you are a pervert but you totally are not!",
+ "SCORE: 72%: You are a GIANT BUG. Giant bugs are friendly and nice. You give group hugs. You attempt triple-kisses whenever you see two people. You 'get down.' You 'ace it up.' Your favorite song is a rap song. You love to jump really high but do it less and less. People call you 'expert' and 'killer!' You are ruled by the moon I think. Part of your body has a deep cut.",
+ "SCORE: Z:  You are a LITTLE BEAN.  You are a little bean personality. You have a hard time making friends (who are not little beans) You are never satisfied. You consider yourself political. You are extremely critical of the other races of man.  You have a hard time getting to bed. You used to love the beach, but now you don't go there.",
+ "SCORE: 54%:  You are a HORSE.  Not bad! 54% is pretty good! You are a horse. You are free, you run, you are strong. You are easily impressed. People don't have to wait for you. Sometimes you forget things; long stretches of time, faces from your past. You are color blind I think. You can hear things that are far away. You easily pick up foreign languages. You don't sleep much, but you do lay in bed longer than you should. People don't always know if you are listening. Your body is 3 degrees colder than the average. Maybe you will die in a car accident, maybe while looking for something you dropped in your car. You will never be 'in love' if thats even a real thing. Um.... you are pretty good at your job, but... its not a big deal and you don't really care for the job anyways. You would dream about flying every night until you turned 12. After that you didn't really dream much. One time your left side went numb for a whole week but you didn't tell anyone. You sometimes go into other peoples lawns at night. Goodbye",
+ "SCORE: 23%:  You are the WOLF.  You are a wolf! You thrive in an academic setting. Nothing stops you from getting your goal. You really kill it when it comes to sports. You can eat, I mean you can really eat. You gain weight. You are always up for adventure. You get lost, a lot. You have a few friends and thats fine.",
+ "SCORE: 43%:  You are the LITTLE BIRD.  The little bird is kinda silly and really FUN! You are so silly! People love that! You love spending time with friends, and having a laugh. You love movies! You love music, all music, except country and rap.",
+ "SCORE: 98%:  You are the HERO.  WOAH 98%!? That is a really good score. You are slammin' hot. You are like, the top dog. You get laid, like all the time. You know what's up. Nice clothing, funny, with a dark edge. People want to have sex with you. You rule!",
+ "SCORE: 9%:  You are the DUCK.  You suuccck. You are the worst and people can tell. You just suck, and there is nothing you can do about it. You take your sadness out on others and it's so terrible. You never have any friends. You love money and you have no morals. Your parents can't stand it. You have bad taste too. I almost forgot that. You have almost no good qualities. Enjoy dying alone, because there is no way you wont."
+];
+
+function RndText() {
+  var rannum= Math.floor(Math.random()*textarray.length);
+  document.getElementById('ShowText').innerHTML=textarray[rannum];
+}
+onload = function() { RndText(); }
+
+</script>
+</head>
+<body>
+<a href="index.html" target="_blank" class="home">/Home</a>
+
+<!-- HEADER -->
+<a href="chat.html#whatwebsiteisthis" target="_blank"><img src="img/webpeople.gif" class="ad"></a>
+<div id="chatheader" class="youravatarheader">
+CONGRATULATIONS!<BR>
+YOU ARE AN AVATAR!
+</div>
+
+<!-- RESULTS -->
+<div id="ShowText" class="ss-form-question"></div>
+
+<!-- SHARES -->	
+<div id="shares">	
+<span class='st_fblike' displayText='Facebook Like'></span>
+<span class='st_fbrec' displayText='Facebook Recommend'></span>
+<span class='st_fbsend' displayText='Facebook Send'></span>
+<!--<span class='st_fbsub' displayText='Facebook Subscribe' st_username='adultswim'></span>-->
+<span class='st_amazon_wishlist' displayText='Amazon Wishlist'></span>
+<span class='st_linkedin' displayText='LinkedIn'></span>
+<span class='st_livejournal' displayText='LiveJournal'></span>
+<span class='st_facebook' displayText='Facebook'></span>
+<span class='st_twitter' displayText='Tweet'></span>
+<span class='st_email' displayText='Email'></span>
+<span class='st_blogger' displayText='Blogger'></span>
+<span class='st_myspace' displayText='MySpace'></span>
+<span class='st_instapaper' displayText='Instapaper'></span>
+<span class='st_n4g' displayText='N4G'></span>
+<span class='st_meneame' displayText='Meneame'></span>
+<span class='st_newsvine' displayText='Newsvine'></span>
+<span class='st_netvouz' displayText='Netvouz'></span>
+<span class='st_kaboodle' displayText='Kaboodle'></span>
+<span class='st_moshare' displayText='moShare'></span>
+<span class='st_netlog' displayText='Netlog'></span>
+<span class='st_messenger' displayText='Messenger'></span>
+<span class='st_identi' displayText='identi.ca'></span>
+<span class='st_mixx' displayText='Mixx'></span>
+<span class='st_linkagogo' displayText='linkaGoGo'></span>
+<span class='st_mister_wong' displayText='Mr Wong'></span>
+<span class='st_hatena' displayText='Hatena'></span>
+<span class='st_jumptags' displayText='Jumptags'></span>
+<span class='st_diigo' displayText='Diigo'></span>
+<span class='st_pinterest' displayText='Pinterest'></span>
+<span class='st_brainify' displayText='Brainify'></span>
+<span class='st_blogmarks' displayText='Blogmarks'></span>
+<span class='st_bebo' displayText='Bebo'></span>
+<!--<span class='st_youtube' displayText='Youtube Subscribe' st_username='tenrobots'></span>-->
+<span class='st_blip' displayText='Blip'></span>
+<span class='st_google_bmarks' displayText='Bookmarks'></span>
+<!--<span class='st_twitterfollow' displayText='Twitter Follow' st_username='alanresnicks'></span>-->
+<!--<span class='st_instagram' displayText='Instagram Badge' st_username='alanresnick'></span>-->
+<span class='st_google_translate' displayText='Google Translate'></span>
+<span class='st_plusone' displayText='Google +1'></span>
+<!--<span class='st_pinterestfollow' displayText='Pinterest Follow' st_username='alanresnick'></span>-->
+<span class='st_foursquaresave' displayText='Foursquare Save'></span>
+<!--<span class='st_foursquarefollow' displayText='Foursquare Follow' st_username='alanresnick' st_followId='1234567'></span>-->
+<span class='st_google' displayText='Google'></span>
+<span class='st_odnoklassniki' displayText='Odnoklassniki'></span>
+<span class='st_google_reader' displayText='Google Reader'></span>
+<span class='st_blinklist' displayText='Blinklist'></span>
+<span class='st_oknotizie' displayText='Oknotizie'></span>
+<span class='st_nujij' displayText='NUjij'></span>
+<span class='st_funp' displayText='Funp'></span>
+<span class='st_fwisp' displayText='fwisp'></span>
+<span class='st_folkd' displayText='folkd.com'></span>
+<span class='st_dzone' displayText='DZone'></span>
+<span class='st_friendfeed' displayText='FriendFeed'></span>
+<span class='st_fresqui' displayText='Fresqui'></span>
+<span class='st_fashiolista' displayText='Fashiolista'></span>
+<span class='st_formspring' displayText='Formspring'></span>
+<span class='st_fark' displayText='Fark'></span>
+<span class='st_delicious' displayText='Delicious'></span>
+<span class='st_evernote' displayText='Evernote'></span>
+<span class='st_corkboard' displayText='Corkboard'></span>
+<span class='st_edmodo' displayText='Edmodo'></span>
+<span class='st_dotnetshoutout' displayText='.net Shoutout'></span>
+<span class='st_raise_your_voice' displayText='Raise Your Voice'></span>
+<span class='st_reddit' displayText='Reddit'></span>
+<span class='st_digg' displayText='Digg'></span>
+<span class='st_orkut' displayText='Orkut'></span>
+<span class='st_dealsplus' displayText='Dealspl.us'></span>
+<span class='st_connotea' displayText='Connotea'></span>
+<span class='st_current' displayText='Current'></span>
+<span class='st_buffer' displayText='Buffer'></span>
+<span class='st_baidu' displayText='Baidu'></span>
+<span class='st_mail_ru' displayText='mail.ru'></span>
+<span class='st_chiq' displayText='chiq'></span>
+<span class='st_speedtile' displayText='Speedtile'></span>
+<span class='st_segnalo' displayText='Segnalo'></span>
+<span class='st_corank' displayText='coRank'></span>
+<span class='st_citeulike' displayText='CiteULike'></span>
+<span class='st_slashdot' displayText='Slashdot'></span>
+<span class='st_arto' displayText='Arto'></span>
+<span class='st_startlap' displayText='Startlap'></span>
+<span class='st_bus_exchange' displayText='Add to BX'></span>
+<span class='st_care2' displayText='Care2'></span>
+<span class='st_adfty' displayText='Adfty'></span>
+<span class='st_buddymarks' displayText='BuddyMarks'></span>
+<span class='st_technorati' displayText='Technorati'></span>
+<span class='st_stumpedia' displayText='Stumpedia'></span>
+<span class='st_yammer' displayText='Yammer'></span>
+<span class='st_stumbleupon' displayText='StumbleUpon'></span>
+<span class='st_voxopolis' displayText='VOXopolis'></span>
+<span class='st_yigg' displayText='Yigg'></span>
+<span class='st_tumblr' displayText='Tumblr'></span>
+<span class='st_viadeo' displayText='Viadeo'></span>
+<span class='st_xanga' displayText='Xanga'></span>
+<span class='st_xing' displayText='Xing'></span>
+<span class='st_xerpi' displayText='Xerpi'></span>
+<span class='st_wordpress' displayText='WordPress'></span>
+<span class='st_vkontakte' displayText='Vkontakte'></span>
+<span class='st_startaid' displayText='Startaid'></span>
+<span class='st_sina' displayText='Sina'></span>
+<span class='st_virb' displayText='Virb'></span>
+<span class='st_hyves' displayText='Hyves'></span>
+<span class='st_sharethis' displayText='ShareThis'></span>
+<span class='st_typepad' displayText='TypePad'></span>
+<span class='st_allvoices' displayText='Allvoices'></span>
+<span class='st_googleplus' displayText='Google +'></span>
+<span class='st_sonico' displayText='Sonico'></span>
+</div>
+
+<img src="img/background.png" id="bg">
+</body>
+
+</html>
