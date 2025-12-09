@@ -104,6 +104,11 @@
 
     <button class="sound-button" onclick="PlaySound('adam_shit')">Shit</button>
     <audio id="adam_shit" src="adam_shit.mp3" preload="auto" style="display:none;"></audio>
+
+
+    <audio id="audio_keep_alive" src="noise60db.mp3" autoplay loop style="display:none;"></audio>
+
+
     <script>
         function PlaySound(soundname) {
             const audio = document.getElementById(soundname);
