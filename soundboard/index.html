@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam Swearing Soundboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #333;
+        }
+
+        .sound-button {
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            font-size: 2em;
+            font-weight: bold;
+            color: #000;
+            background-color: #aaa;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .sound-button:hover {
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <button class="sound-button" onclick="PlaySound('adam_ass')">Ass</button>
+    <audio id="adam_ass" src="adam_ass.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_asshole')">Ass Hole</button>
+    <audio id="adam_asshole" src="adam_asshole.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_bastard')">Bastard</button>
+    <audio id="adam_bastard" src="adam_bastard.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_bigdick')">Big Dick</button>
+    <audio id="adam_bigdick" src="adam_bigdick.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_bitch')">Bitch</button>
+    <audio id="adam_bitch" src="adam_bitch.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_cum')">Cum</button>
+    <audio id="adam_cum" src="adam_cum.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_damn')">Damn</button>
+    <audio id="adam_damn" src="adam_damn.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_damnit')">Damn it</button>
+    <audio id="adam_damnit" src="adam_damnit.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_fuck')">Fuck</button>
+    <audio id="adam_fuck" src="adam_fuck.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_fuck_shorter')">Fuck (shorter)</button>
+    <audio id="adam_fuck_shorter" src="adam_fuck_shorter.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_holyshit')">Holy shit</button>
+    <audio id="adam_holyshit" src="adam_holyshit.mp3" preload="auto" style="display:none;"></audio>
+    
+    <button class="sound-button" onclick="PlaySound('adam_penis')">Penis</button>
+    <audio id="adam_penis" src="adam_penis.mp3" preload="auto" style="display:none;"></audio>
+    
+    <button class="sound-button" onclick="PlaySound('adam_piss')">Piss</button>
+    <audio id="adam_piss" src="adam_piss.mp3" preload="auto" style="display:none;"></audio>
+
+    <button class="sound-button" onclick="PlaySound('adam_shit')">Shit</button>
+    <audio id="adam_shit" src="adam_shit.mp3" preload="auto" style="display:none;"></audio>
+    <script>
+        function PlaySound(soundname) {
+            const audio = document.getElementById(soundname);
+            audio.pause();
+            audio.currentTime = 0;
+            audio.play().catch(error => {
+                console.error("audio.play fucked up somehow", error);
+            });
+        }
+    </script>
+
+</body>
+</html>
