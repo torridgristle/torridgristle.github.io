@@ -1,0 +1,13 @@
+{
+    "_background": { "x":2438, "y":4146, "order":-1, "mode":"normal" },
+uniq"Front/Harry_Doll_Front_Body.png": { "x":290, "y":2253, "order":7, "mode":"normal" },
+uniq"Back/Harry_Doll_Back_Body.png": { "x":344, "y":2276, "order":3, "mode":"normal" },
+pair"head/Harry_Doll_Back_Shaved_Head.png": { "x":267, "y":1812, "order":5, "mode":"normal" },
+pair"head/Harry_Doll_Back_Unshaved_Head.png": { "x":261, "y":1812, "order":6, "mode":"normal" },
+pair"head front/Harry_Doll_Front_Shaved_Head.png": { "x":245, "y":1821, "order":12, "mode":"normal" },
+pair"head front/Harry_Doll_Front_Unshaved_Head.png": { "x":245, "y":1821, "order":13, "mode":"normal" },
+pair"Back/Harry_Doll_Back_Shaved_Head.png": { "x":534, "y":3625, "order":4, "mode":"normal" },
+pair"Back/Harry_Doll_Back_Unshaved_Head.png": { "x":522, "y":3625, "order":5, "mode":"normal" },
+pair"Front/Harry_Doll_Front_Shaved_Head.png": { "x":489, "y":3643, "order":8, "mode":"normal" },
+pair"Front/Harry_Doll_Front_Unshaved_Head.png": { "x":489, "y":3643, "order":9, "mode":"normal" }
+}
