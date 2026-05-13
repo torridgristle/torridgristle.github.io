@@ -1,0 +1,314 @@
+<!--
+<img src="url.jpg" style="position: absolute; left: calc([X]pxpx - 231px); bottom: calc([Y]pxpx - 3000px); z-index: [Z];">
+3783 is the largest value for bottom
+541 is the smallest value for bottom
+231 is the smallest value for left
+-->
+
+<style>
+.cloth_back, .body_back, .head_back {
+    transform: translateX(calc(50vw + 160px)) !important;
+}
+
+.cloth_mask {
+    display: none !important;
+}
+
+.dressup_images {
+    position: absolute;
+    transform: translateY(940px) !important;
+}
+</style>
+
+
+<script>
+    function ToggleClothes(clothes) {
+        //const element = document.getElementById(clothes);
+        const elements = document.querySelectorAll('#' + clothes);
+        elements.forEach(el => {
+            if (el.style.display === "none") {
+                el.style.display = "block";
+            } else {
+            el.style.display = "none";
+            }
+        });
+    }
+
+    function StripClothes() {
+        const elements = document.querySelectorAll("img.cloth_back, img.cloth_front");
+        elements.forEach(el => {
+            el.style.display = "none";
+        });
+    }
+</script>
+
+<div class="controls">
+<button class="button_shoes" onclick="StripClothes()">Strip</button>
+
+<button class="button_shoes" onclick="ToggleClothes('shoes_t500')">T-500</button>
+<button class="button_shoes" onclick="ToggleClothes('shoes_faln')">Faln</button>
+<button class="button_shoes" onclick="ToggleClothes('shoes_cavalry')">Cavalry</button>
+<button class="button_shoes" onclick="ToggleClothes('shoes_snakeskin')">Snakeskin</button>
+<button class="button_shoes" onclick="ToggleClothes('shoes_snakeskin_red')">Mesque</button>
+<button class="button_shoes" onclick="ToggleClothes('shoes_DONKS')">DONKS</button>
+<button class="button_shoes" onclick="ToggleClothes('shoes_snakeskin_left')">Snakeskin Left</button>
+<button class="button_shoes" onclick="ToggleClothes('shoes_snakeskin_right')">Snakeskin Right</button>
+
+<button class="button_pants" onclick="ToggleClothes('pants_faln')">Faln</button>
+<button class="button_pants" onclick="ToggleClothes('pants_interisolar')">Interisolar</button>
+<button class="button_pants" onclick="ToggleClothes('pants_itchy_angry')">Itchy</button>
+<button class="button_pants" onclick="ToggleClothes('pants_jeans')">Jeans</button>
+<button class="button_pants" onclick="ToggleClothes('pants_rcm')">RCM</button>
+<button class="button_pants" onclick="ToggleClothes('pants_carabineer')">Carabineer</button>
+<button class="button_pants" onclick="ToggleClothes('pants_bellbottom')">Bellbottom</button>
+
+<button class="button_shirt" onclick="ToggleClothes('shirt_t500')">T-500</button>
+<button class="button_shirt" onclick="ToggleClothes('shirt_faln')">Faln</button>
+<button class="button_shirt" onclick="ToggleClothes('shirt_mesh')">Mesh</button>
+<button class="button_shirt" onclick="ToggleClothes('shirt_interisolar')">Interisolar</button>
+<button class="button_shirt" onclick="ToggleClothes('shirt_hjelmdall')">Hjelmdall</button>
+<button class="button_shirt" onclick="ToggleClothes('shirt_polo')">Polo</button>
+<button class="button_shirt" onclick="ToggleClothes('shirt_disco')">Satin</button>
+<button class="button_shirt" onclick="ToggleClothes('shirt_tank')">Tanktop</button>
+
+<button class="button_gloves" onclick="ToggleClothes('gloves_t500')">T-500</button>
+<button class="button_gloves" onclick="ToggleClothes('gloves_faln')">Faln</button>
+<button class="button_gloves" onclick="ToggleClothes('gloves_bum')">Bum</button>
+<button class="button_gloves" onclick="ToggleClothes('gloves_garden')">Garden</button>
+
+<button class="button_jacket" onclick="ToggleClothes('jacket_disco')">Disco</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_surf')">Surf</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_faln')">Faln</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_rain')">Rain</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_interisolar')">Interisolar</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_fuck')">Fuck</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_piss')">Piss</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_dragon')">Dragon</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_pinball')">Pinball</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_commander')">Commander</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_patrol')">Patrol</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_carabineer')">Carabineer</button>
+<button class="button_jacket" onclick="ToggleClothes('jacket_naval')">Naval</button>
+
+<button class="button_neck" onclick="ToggleClothes('neck_teratorn')">Teratorn</button>
+<button class="button_neck" onclick="ToggleClothes('neck_horrific')">Horrific</button>
+<button class="button_neck" onclick="ToggleClothes('neck_medal')">Medal</button>
+<button class="button_neck" onclick="ToggleClothes('neck_banger')">Banger</button>
+<button class="button_neck" onclick="ToggleClothes('neck_scent')">Scented</button>
+<button class="button_neck" onclick="ToggleClothes('neck_army')">Army</button>
+<button class="button_neck" onclick="ToggleClothes('neck_pin')">Pin</button>
+
+<button class="button_hat" onclick="ToggleClothes('hat_mullen')">Mullen</button>
+<button class="button_hat" onclick="ToggleClothes('hat_t500')">T-500</button>
+<button class="button_hat" onclick="ToggleClothes('hat_faln')">Faln</button>
+<button class="button_hat" onclick="ToggleClothes('hat_bum')">Bum</button>
+<button class="button_hat" onclick="ToggleClothes('hat_rcm')">RCM</button>
+<button class="button_hat" onclick="ToggleClothes('hat_conical')">Conical</button>
+<button class="button_hat" onclick="ToggleClothes('hat_amphibian_sports_visor')">Amphibian</button>
+
+<button class="button_eyes" onclick="ToggleClothes('eyes_rendezvous')">Rendezvous</button>
+<button class="button_eyes" onclick="ToggleClothes('eyes_biker')">Biker</button>
+<button class="button_eyes" onclick="ToggleClothes('eyes_megabino')">Mega-Bino</button>
+<button class="button_eyes" onclick="ToggleClothes('eyes_superstar')">Superstar</button>
+<button class="button_eyes" onclick="ToggleClothes('eyes_selfdestruction')">Self-Destruction</button>
+</div>
+
+<div class="dressup_images">
+<!-- Harry -->
+<img src="HarryDoll/Harry_Doll_Front_Body.png" class="body_front harry" style="position: absolute; left: calc(290px - 231px); bottom: calc(2253px - 3000px); z-index: 7;">
+<img src="HarryDoll/Harry_Doll_Back_Body.png" class="body_back harry" style="position: absolute; left: calc(344px - 231px); bottom: calc(2276px - 3000px); z-index: 3;">
+<!-- Harry Head unused definitions from Harry_Doll_layout_info.prefab
+<img src="HarryDoll/Harry_Doll_Back_Shaved_Head.png" class="head_back" style="position: absolute; left: calc(267px - 231px); bottom: calc(1812px - 3000px); z-index: 5;">
+<img src="HarryDoll/Harry_Doll_Back_Unshaved_Head.png" class="head_back" style="position: absolute; left: calc(261px - 231px); bottom: calc(1812px - 3000px); z-index: 6;">
+<img src="HarryDoll/Harry_Doll_Front_Shaved_Head.png" class="head_front" style="position: absolute; left: calc(245px - 231px); bottom: calc(1821px - 3000px); z-index: 12;">
+<img src="HarryDoll/Harry_Doll_Front_Unshaved_Head.png" class="head_front" style="position: absolute; left: calc(245px - 231px); bottom: calc(1821px - 3000px); z-index: 13;">
+-->
+<!-- Harry Head -->
+<img src="HarryDoll/Harry_Doll_Back_Shaved_Head.png" class="head_back harry" style="position: absolute; left: calc(534px - 231px); bottom: calc(3625px - 3000px); z-index: 4;">
+<img src="HarryDoll/Harry_Doll_Back_Unshaved_Head.png" class="head_back harry" style="position: absolute; left: calc(522px - 231px); bottom: calc(3625px - 3000px); z-index: 5;">
+<img src="HarryDoll/Harry_Doll_Front_Shaved_Head.png" class="head_front harry" style="position: absolute; left: calc(489px - 231px); bottom: calc(3643px - 3000px); z-index: 8;">
+<img src="HarryDoll/Harry_Doll_Front_Unshaved_Head.png" class="head_front harry" style="position: absolute; left: calc(489px - 231px); bottom: calc(3643px - 3000px); z-index: 9;">
+<!-- Clothing -->
+<img src="Feet/CLOTH_Fairweather T-500 Greaves_BACK.png" class="cloth_back" id="shoes_t500" style="position: absolute; left: calc(328px - 231px); bottom: calc(2263px - 3000px); z-index: 7;">
+<img src="Feet/CLOTH_FALN 'Ultra' Series Sneakers_BACK.png" class="cloth_back" id="shoes_faln" style="position: absolute; left: calc(315px - 231px); bottom: calc(2271px - 3000px); z-index: 10;">
+<img src="Feet/CLOTH_Franconigerian Cavalry Boots_BACK.png" class="cloth_back" id="shoes_cavalry" style="position: absolute; left: calc(349px - 231px); bottom: calc(2261px - 3000px); z-index: 11;">
+<img src="Feet/CLOTH_Green Snakeskin Shoes_BACK.png" class="cloth_back" id="shoes_snakeskin" style="position: absolute; left: calc(318px - 231px); bottom: calc(2265px - 3000px); z-index: 13;">
+<img src="Feet/CLOTH_Mesque Banger's Red Brogues_BACK.png" class="cloth_back" id="shoes_snakeskin_red" style="position: absolute; left: calc(314px - 231px); bottom: calc(2269px - 3000px); z-index: 14;">
+<img src="Feet/CLOTH_Speedfreaks DONKS_BACK.png" class="cloth_back" id="shoes_donks" style="position: absolute; left: calc(315px - 231px); bottom: calc(2269px - 3000px); z-index: 15;">
+<img src="Feet/CLOTH_Green shoe (left foot)_BACK.png" class="cloth_back" id="shoes_snakeskin_left" style="position: absolute; left: calc(318px - 231px); bottom: calc(2265px - 3000px); z-index: 17;">
+<img src="Feet/CLOTH_Green shoe (right foot)_BACK.png" class="cloth_back" id="shoes_snakeskin_right" style="position: absolute; left: calc(596px - 231px); bottom: calc(2305px - 3000px); z-index: 19;">
+<img src="Pants/CLOTH_FALN 'Modular' Track Pants_BACK.png" class="cloth_back" id="pants_faln" style="position: absolute; left: calc(418px - 231px); bottom: calc(2508px - 3000px); z-index: 21;">
+<img src="Pants/CLOTH_Interisolary Trousers_BACK.png" class="cloth_back" id="pants_interisolar" style="position: absolute; left: calc(433px - 231px); bottom: calc(2330px - 3000px); z-index: 23;">
+<img src="Pants/CLOTH_Itchy Pants_BACK.png" class="cloth_back" id="pants_itchy_angry" style="position: absolute; left: calc(424px - 231px); bottom: calc(2508px - 3000px); z-index: 24;">
+<img src="Pants/CLOTH_Pour L'Homme Labourer Jeans_BACK.png" class="cloth_back" id="pants_jeans" style="position: absolute; left: calc(433px - 231px); bottom: calc(2330px - 3000px); z-index: 25;">
+<img src="Pants/CLOTH_RCM Lieutenant's Pants_BACK.png" class="cloth_back" id="pants_rcm" style="position: absolute; left: calc(433px - 231px); bottom: calc(2330px - 3000px); z-index: 26;">
+<img src="Pants/CLOTH_Royal Carabineer Pants_BACK.png" class="cloth_back" id="pants_carabineer" style="position: absolute; left: calc(424px - 231px); bottom: calc(2508px - 3000px); z-index: 27;">
+<img src="Pants/CLOTH_Flare-cut Trousers_BACK.png" class="cloth_back" id="pants_bellbottom" style="position: absolute; left: calc(405px - 231px); bottom: calc(2304px - 3000px); z-index: 28;">
+<img src="Shirt/CLOTH_Fairweather T-500 Cuirass_BACK.png" class="cloth_back" id="shirt_t500" style="position: absolute; left: calc(359px - 231px); bottom: calc(3039px - 3000px); z-index: 30;">
+<img src="Shirt/CLOTH_FALN 'Arrower' Shirt_BACK.png" class="cloth_back" id="shirt_faln" style="position: absolute; left: calc(352px - 231px); bottom: calc(3036px - 3000px); z-index: 33;">
+<img src="Shirt/CLOTH_Insane Mesh Tank Top_BACK.png" class="cloth_back" id="shirt_mesh" style="position: absolute; left: calc(466px - 231px); bottom: calc(3108px - 3000px); z-index: 35;">
+<img src="Shirt/CLOTH_Interisolary Dress Shirt_BACK.png" class="cloth_back" id="shirt_interisolar" style="position: absolute; left: calc(356px - 231px); bottom: calc(3021px - 3000px); z-index: 36;">
+<img src="Shirt/CLOTH_T-Shirt 'Man From Hjelmdall'_BACK.png" class="cloth_back" id="shirt_hjelmdall" style="position: absolute; left: calc(416px - 231px); bottom: calc(3031px - 3000px); z-index: 37;">
+<img src="Shirt/CLOTH_White Polo Shirt_BACK.png" class="cloth_back" id="shirt_polo" style="position: absolute; left: calc(422px - 231px); bottom: calc(3040px - 3000px); z-index: 38;">
+<img src="Shirt/CLOTH_White Satin Shirt_BACK.png" class="cloth_back" id="shirt_disco" style="position: absolute; left: calc(356px - 231px); bottom: calc(3021px - 3000px); z-index: 39;">
+<img src="Shirt/CLOTH_White Tank Top_BACK.png" class="cloth_back" id="shirt_tank" style="position: absolute; left: calc(465px - 231px); bottom: calc(3110px - 3000px); z-index: 40;">
+<img src="Hands/CLOTH_Fairweather T-500 Gauntlets_BACK.png" class="cloth_back" id="gloves_t500" style="position: absolute; left: calc(329px - 231px); bottom: calc(2919px - 3000px); z-index: 42;">
+<img src="Hands/CLOTH_FALN 'Ultra' Series Gloves_BACK.png" class="cloth_back" id="gloves_faln" style="position: absolute; left: calc(329px - 231px); bottom: calc(2926px - 3000px); z-index: 44;">
+<img src="Hands/CLOTH_Fingerless Gloves_BACK.png" class="cloth_back" id="gloves_bum" style="position: absolute; left: calc(338px - 231px); bottom: calc(2928px - 3000px); z-index: 46;">
+<img src="Hands/CLOTH_Yellow Gardening Gloves_BACK.png" class="cloth_back" id="gloves_garden" style="position: absolute; left: calc(341px - 231px); bottom: calc(2924px - 3000px); z-index: 48;">
+<img src="Jacket/CLOTH_Disco-Ass Blazer_BACK.png" class="cloth_back" id="jacket_disco" style="position: absolute; left: calc(351px - 231px); bottom: calc(2926px - 3000px); z-index: 51;">
+<img src="Jacket/CLOTH_Dynamic Winderbreaker Surf_BACK.png" class="cloth_back" id="jacket_surf" style="position: absolute; left: calc(345px - 231px); bottom: calc(2948px - 3000px); z-index: 52;">
+<img src="Jacket/CLOTH_FALN 'Faln' Windbreaker_BACK.png" class="cloth_back" id="jacket_faln" style="position: absolute; left: calc(358px - 231px); bottom: calc(2965px - 3000px); z-index: 53;">
+<img src="Jacket/CLOTH_FRITTTE Plastic Rain Coat_BACK.png" class="cloth_back" id="jacket_rain" style="position: absolute; left: calc(338px - 231px); bottom: calc(2971px - 3000px); z-index: 55;">
+<img src="Jacket/CLOTH_Interisolary Suit Jacket_BACK.png" class="cloth_back" id="jacket_interisolar" style="position: absolute; left: calc(351px - 231px); bottom: calc(2946px - 3000px); z-index: 57;">
+<img src="Jacket/CLOTH_Korojev Jacket_BACK.png" class="cloth_back" id="jacket_korojev" style="position: absolute; left: calc(351px - 231px); bottom: calc(2946px - 3000px); z-index: 58;">
+<img src="Jacket/CLOTH_Leather Jacket Fuck the World_BACK.png" class="cloth_back" id="jacket_fuck" style="position: absolute; left: calc(355px - 231px); bottom: calc(2928px - 3000px); z-index: 59;">
+<img src="Jacket/CLOTH_Leather Jacket Pissflaubert_BACK.png" class="cloth_back" id="jacket_piss" style="position: absolute; left: calc(355px - 231px); bottom: calc(2926px - 3000px); z-index: 62;">
+<img src="Jacket/CLOTH_Party Dragon's Silk Robe_BACK.png" class="cloth_back" id="jacket_dragon" style="position: absolute; left: calc(338px - 231px); bottom: calc(2632px - 3000px); z-index: 65;">
+<img src="Jacket/CLOTH_Pinball Maker's Coat_BACK.png" class="cloth_back" id="jacket_pinball" style="position: absolute; left: calc(327px - 231px); bottom: calc(2574px - 3000px); z-index: 67;">
+<img src="Jacket/CLOTH_RCM Commander's Jacket_BACK.png" class="cloth_back" id="jacket_commander" style="position: absolute; left: calc(351px - 231px); bottom: calc(2926px - 3000px); z-index: 68;">
+<img src="Jacket/CLOTH_RCM Patrol Cloak_BACK.png" class="cloth_back" id="jacket_patrol" style="position: absolute; left: calc(326px - 231px); bottom: calc(2648px - 3000px); z-index: 69;">
+<img src="Jacket/CLOTH_Royal Carabineer Jacket_BACK.png" class="cloth_back" id="jacket_carabineer" style="position: absolute; left: calc(346px - 231px); bottom: calc(2965px - 3000px); z-index: 70;">
+<img src="Jacket/CLOTH_Signal-Blue Naval Coat_BACK.png" class="cloth_back" id="jacket_naval" style="position: absolute; left: calc(328px - 231px); bottom: calc(2574px - 3000px); z-index: 71;">
+<img src="Neck/CLOTH_Eight-Eyed Teratorn Tie_BACK.png" class="cloth_back" id="neck_teratorn" style="position: absolute; left: calc(573px - 231px); bottom: calc(3621px - 3000px); z-index: 74;">
+<img src="Neck/CLOTH_Horrific Necktie_BACK.png" class="cloth_back" id="neck_horrific" style="position: absolute; left: calc(566px - 231px); bottom: calc(3605px - 3000px); z-index: 75;">
+<img src="Neck/CLOTH_Medal The Setting Sun_BACK.png" class="cloth_back" id="neck_medal" style="position: absolute; left: calc(377px - 231px); bottom: calc(3514px - 3000px); z-index: 76;">
+<img src="Neck/CLOTH_Mesque Banger's Silk Scarf_BACK.png" class="cloth_back" id="neck_banger" style="position: absolute; left: calc(498px - 231px); bottom: calc(3582px - 3000px); z-index: 77;">
+<img src="Neck/CLOTH_Scented Scarf_BACK.png" class="cloth_back" id="neck_scent" style="position: absolute; left: calc(569px - 231px); bottom: calc(3598px - 3000px); z-index: 79;">
+<img src="Neck/CLOTH_Army Surplus Winter Scarf_BACK.png" class="cloth_back" id="neck_army" style="position: absolute; left: calc(498px - 231px); bottom: calc(3585px - 3000px); z-index: 80;">
+<img src="Neck/CLOTH_Commemorative Pin_BACK.png" class="cloth_back" id="neck_pin" style="position: absolute; left: calc(398px - 231px); bottom: calc(3514px - 3000px); z-index: 82;">
+<img src="Head/CLOTH_Dick Mullen's Hat_BACK.png" class="cloth_back" id="hat_mullen" style="position: absolute; left: calc(464px - 231px); bottom: calc(3759px - 3000px); z-index: 90;">
+<img src="Head/CLOTH_Fairweather T-500 Helmet_BACK.png" class="cloth_back" id="hat_t500" style="position: absolute; left: calc(443px - 231px); bottom: calc(3632px - 3000px); z-index: 91;">
+<img src="Head/CLOTH_FALN 'Pipo' Pipo_BACK.png" class="cloth_back" id="hat_faln" style="position: absolute; left: calc(536px - 231px); bottom: calc(3710px - 3000px); z-index: 92;">
+<img src="Head/CLOTH_Orange Bum Hat_BACK.png" class="cloth_back" id="hat_bum" style="position: absolute; left: calc(523px - 231px); bottom: calc(3694px - 3000px); z-index: 93;">
+<img src="Head/CLOTH_RCM Lieutenant's Cap_BACK.png" class="cloth_back" id="hat_rcm" style="position: absolute; left: calc(503px - 231px); bottom: calc(3783px - 3000px); z-index: 94;">
+<img src="Head/CLOTH_Revolutionary's Hat_BACK.png" class="cloth_back" id="hat_rev" style="position: absolute; left: calc(515px - 231px); bottom: calc(3629px - 3000px); z-index: 95;">
+<img src="Head/CLOTH_Samaran Conical Hat_BACK.png" class="cloth_back" id="hat_conical" style="position: absolute; left: calc(365px - 231px); bottom: calc(3675px - 3000px); z-index: 96;">
+<img src="Head/CLOTH_Amphibian Sports Visor_BACK.png" class="cloth_back" id="hat_amphibian_sports_visor" style="position: absolute; left: calc(482px - 231px); bottom: calc(3760px - 3000px); z-index: 97;">
+<img src="Feet/CLOTH_FALN 'Ultra' Series Sneakers_FRONT.png" class="cloth_front" id="shoes_faln" style="position: absolute; left: calc(496px - 231px); bottom: calc(2246px - 3000px); z-index: 105;">
+<img src="Feet/CLOTH_Franconigerian Cavalry Boots_FRONT.png" class="cloth_front" id="shoes_cavalry" style="position: absolute; left: calc(437px - 231px); bottom: calc(2232px - 3000px); z-index: 107;">
+<img src="Feet/CLOTH_Green Snakeskin Shoes_FRONT.png" class="cloth_front" id="shoes_snakeskin" style="position: absolute; left: calc(497px - 231px); bottom: calc(2247px - 3000px); z-index: 109;">
+<img src="Feet/CLOTH_Mesque Banger's Red Brogues_FRONT.png" class="cloth_front" id="shoes_snakeskin_red" style="position: absolute; left: calc(496px - 231px); bottom: calc(2244px - 3000px); z-index: 110;">
+<img src="Feet/CLOTH_Speedfreaks DONKS_FRONT.png" class="cloth_front" id="shoes_donks" style="position: absolute; left: calc(496px - 231px); bottom: calc(2246px - 3000px); z-index: 112;">
+<img src="Feet/CLOTH_Green shoe (left foot)_FRONT.png" class="cloth_front" id="shoes_snakeskin_left" style="position: absolute; left: calc(726px - 231px); bottom: calc(2265px - 3000px); z-index: 114;">
+<img src="Feet/CLOTH_Green shoe (right foot)_FRONT.png" class="cloth_front" id="shoes_snakeskin_right" style="position: absolute; left: calc(497px - 231px); bottom: calc(2247px - 3000px); z-index: 116;">
+<img src="Feet/CLOTH_Fairweather T-500 Greaves_FRONT.png" class="cloth_front" id="shoes_t500" style="position: absolute; left: calc(450px - 231px); bottom: calc(2243px - 3000px); z-index: 118;">
+<img src="Pants/CLOTH_FALN 'Modular' Track Pants_FRONT.png" class="cloth_front" id="pants_faln" style="position: absolute; left: calc(413px - 231px); bottom: calc(2530px - 3000px); z-index: 121;">
+<img src="Pants/CLOTH_Interisolary Trousers_FRONT.png" class="cloth_front" id="pants_interisolar" style="position: absolute; left: calc(413px - 231px); bottom: calc(2316px - 3000px); z-index: 123;">
+<img src="Pants/CLOTH_Itchy Pants_FRONT.png" class="cloth_front" id="pants_itchy_angry" style="position: absolute; left: calc(405px - 231px); bottom: calc(2530px - 3000px); z-index: 124;">
+<img src="Pants/CLOTH_Pour L'Homme Labourer Jeans_FRONT.png" class="cloth_front" id="pants_jeans" style="position: absolute; left: calc(413px - 231px); bottom: calc(2316px - 3000px); z-index: 125;">
+<img src="Pants/CLOTH_RCM Lieutenant's Pants_FRONT.png" class="cloth_front" id="pants_rcm" style="position: absolute; left: calc(413px - 231px); bottom: calc(2316px - 3000px); z-index: 126;">
+<img src="Pants/CLOTH_Royal Carabineer Pants_FRONT.png" class="cloth_front" id="pants_carabineer" style="position: absolute; left: calc(407px - 231px); bottom: calc(2530px - 3000px); z-index: 127;">
+<img src="Pants/CLOTH_Flare-cut Trousers_FRONT.png" class="cloth_front" id="pants_bellbottom" style="position: absolute; left: calc(414px - 231px); bottom: calc(2311px - 3000px); z-index: 128;">
+<img src="Hands/CLOTH_Fairweather T-500 Gauntlets_FRONT.png" class="cloth_front" id="gloves_t500" style="position: absolute; left: calc(306px - 231px); bottom: calc(2887px - 3000px); z-index: 130;">
+<img src="Hands/CLOTH_FALN 'Ultra' Series Gloves_FRONT.png" class="cloth_front" id="gloves_faln" style="position: absolute; left: calc(323px - 231px); bottom: calc(2913px - 3000px); z-index: 132;">
+<img src="Hands/CLOTH_Fingerless Gloves_FRONT.png" class="cloth_front" id="gloves_bum" style="position: absolute; left: calc(338px - 231px); bottom: calc(2917px - 3000px); z-index: 134;">
+<img src="Hands/CLOTH_Yellow Gardening Gloves_FRONT.png" class="cloth_front" id="gloves_garden" style="position: absolute; left: calc(282px - 231px); bottom: calc(2899px - 3000px); z-index: 136;">
+<img src="Shirt/CLOTH_Fairweather T-500 Cuirass_FRONT.png" class="cloth_front" id="shirt_t500" style="position: absolute; left: calc(285px - 231px); bottom: calc(3016px - 3000px); z-index: 139;">
+<img src="Shirt/CLOTH_FALN 'Arrower' Shirt_FRONT.png" class="cloth_front" id="shirt_faln" style="position: absolute; left: calc(313px - 231px); bottom: calc(3049px - 3000px); z-index: 143;">
+<img src="Shirt/CLOTH_Insane Mesh Tank Top_FRONT.png" class="cloth_front" id="shirt_mesh" style="position: absolute; left: calc(413px - 231px); bottom: calc(3111px - 3000px); z-index: 144;">
+<img src="Shirt/CLOTH_Interisolary Dress Shirt_FRONT.png" class="cloth_front" id="shirt_interisolar" style="position: absolute; left: calc(284px - 231px); bottom: calc(2997px - 3000px); z-index: 145;">
+<img src="Shirt/CLOTH_T-Shirt 'Man From Hjelmdall'_FRONT.png" class="cloth_front" id="shirt_hjelmdall" style="position: absolute; left: calc(295px - 231px); bottom: calc(3017px - 3000px); z-index: 146;">
+<img src="Shirt/CLOTH_White Polo Shirt_FRONT.png" class="cloth_front" id="shirt_polo" style="position: absolute; left: calc(306px - 231px); bottom: calc(3064px - 3000px); z-index: 147;">
+<img src="Shirt/CLOTH_White Satin Shirt_FRONT.png" class="cloth_front" id="shirt_disco" style="position: absolute; left: calc(284px - 231px); bottom: calc(2997px - 3000px); z-index: 148;">
+<img src="Shirt/CLOTH_White Tank Top_FRONT.png" class="cloth_front" id="shirt_tank" style="position: absolute; left: calc(412px - 231px); bottom: calc(3116px - 3000px); z-index: 149;">
+<img src="Jacket/CLOTH_Disco-Ass Blazer_FRONT.png" class="cloth_front" id="jacket_disco" style="position: absolute; left: calc(278px - 231px); bottom: calc(2959px - 3000px); z-index: 152;">
+<img src="Jacket/CLOTH_Dynamic Winderbreaker Surf_FRONT.png" class="cloth_front" id="jacket_surf" style="position: absolute; left: calc(270px - 231px); bottom: calc(2960px - 3000px); z-index: 154;">
+<img src="Jacket/CLOTH_FALN 'Faln' Windbreaker_FRONT.png" class="cloth_front" id="jacket_faln" style="position: absolute; left: calc(266px - 231px); bottom: calc(2989px - 3000px); z-index: 156;">
+<img src="Jacket/CLOTH_FRITTTE Plastic Rain Coat_FRONT.png" class="cloth_front" id="jacket_rain" style="position: absolute; left: calc(231px - 231px); bottom: calc(2990px - 3000px); z-index: 158;">
+<img src="Jacket/CLOTH_Interisolary Suit Jacket_FRONT.png" class="cloth_front" id="jacket_interisolar" style="position: absolute; left: calc(279px - 231px); bottom: calc(2962px - 3000px); z-index: 160;">
+<img src="Jacket/CLOTH_Korojev Jacket_FRONT.png" class="cloth_front" id="jacket_korojev" style="position: absolute; left: calc(278px - 231px); bottom: calc(2959px - 3000px); z-index: 161;">
+<img src="Jacket/CLOTH_Leather Jacket Fuck the World_FRONT.png" class="cloth_front" id="jacket_fuck" style="position: absolute; left: calc(268px - 231px); bottom: calc(3038px - 3000px); z-index: 162;">
+<img src="Jacket/CLOTH_Leather Jacket Pissflaubert_FRONT.png" class="cloth_front" id="jacket_piss" style="position: absolute; left: calc(272px - 231px); bottom: calc(3029px - 3000px); z-index: 163;">
+<img src="Jacket/CLOTH_Party Dragon's Silk Robe_FRONT.png" class="cloth_front" id="jacket_dragon" style="position: absolute; left: calc(268px - 231px); bottom: calc(2659px - 3000px); z-index: 164;">
+<img src="Jacket/CLOTH_Pinball Maker's Coat_FRONT.png" class="cloth_front" id="jacket_pinball" style="position: absolute; left: calc(277px - 231px); bottom: calc(2580px - 3000px); z-index: 166;">
+<img src="Jacket/CLOTH_RCM Commander's Jacket_FRONT.png" class="cloth_front" id="jacket_commander" style="position: absolute; left: calc(277px - 231px); bottom: calc(2980px - 3000px); z-index: 167;">
+<img src="Jacket/CLOTH_RCM Patrol Cloak_FRONT.png" class="cloth_front" id="jacket_patrol" style="position: absolute; left: calc(252px - 231px); bottom: calc(2654px - 3000px); z-index: 168;">
+<img src="Jacket/CLOTH_Royal Carabineer Jacket_FRONT.png" class="cloth_front" id="jacket_carabineer" style="position: absolute; left: calc(233px - 231px); bottom: calc(2965px - 3000px); z-index: 169;">
+<img src="Jacket/CLOTH_Signal-Blue Naval Coat_FRONT.png" class="cloth_front" id="jacket_naval" style="position: absolute; left: calc(271px - 231px); bottom: calc(2580px - 3000px); z-index: 170;">
+<img src="Neck/CLOTH_Eight-Eyed Teratorn Tie_FRONT.png" class="cloth_front" id="neck_teratorn" style="position: absolute; left: calc(531px - 231px); bottom: calc(3330px - 3000px); z-index: 173;">
+<img src="Neck/CLOTH_Horrific Necktie_FRONT.png" class="cloth_front" id="neck_horrific" style="position: absolute; left: calc(521px - 231px); bottom: calc(3043px - 3000px); z-index: 174;">
+<img src="Neck/CLOTH_Medal The Setting Sun_FRONT.png" class="cloth_front" id="neck_medal" style="position: absolute; left: calc(713px - 231px); bottom: calc(3325px - 3000px); z-index: 175;">
+<img src="Neck/CLOTH_Mesque Banger's Silk Scarf_FRONT.png" class="cloth_front" id="neck_banger" style="position: absolute; left: calc(434px - 231px); bottom: calc(3231px - 3000px); z-index: 176;">
+<img src="Neck/CLOTH_Scented Scarf_FRONT.png" class="cloth_front" id="neck_scent" style="position: absolute; left: calc(524px - 231px); bottom: calc(3183px - 3000px); z-index: 177;">
+<img src="Neck/CLOTH_Commemorative Pin_FRONT.png" class="cloth_front" id="neck_pin" style="position: absolute; left: calc(387px - 231px); bottom: calc(3514px - 3000px); z-index: 178;">
+<img src="Neck/CLOTH_Army Surplus Winter Scarf_FRONT.png" class="cloth_front" id="neck_army" style="position: absolute; left: calc(434px - 231px); bottom: calc(3231px - 3000px); z-index: 179;">
+<img src="Neck/CLOTH_Interisolary Dress Shirt_COLLAR.png" class="cloth_front" id="shirt_interisolar" style="position: absolute; left: calc(517px - 231px); bottom: calc(3561px - 3000px); z-index: 180;">
+<img src="Neck/CLOTH_White Polo Shirt_COLLAR.png" class="cloth_front" id="shirt_polo" style="position: absolute; left: calc(522px - 231px); bottom: calc(3560px - 3000px); z-index: 181;">
+<img src="Neck/CLOTH_White Satin Shirt_COLLAR.png" class="cloth_front" id="shirt_disco" style="position: absolute; left: calc(496px - 231px); bottom: calc(3506px - 3000px); z-index: 182;">
+<img src="Eyes/CLOTH_Jamrock Biker-Cop Sunnies_FRONT.png" class="cloth_front" id="eyes_biker" style="position: absolute; left: calc(550px - 231px); bottom: calc(3740px - 3000px); z-index: 186;">
+<img src="Eyes/CLOTH_Mega-Bino's Prescription Lenses_FRONT.png" class="cloth_front" id="eyes_megabino" style="position: absolute; left: calc(548px - 231px); bottom: calc(3745px - 3000px); z-index: 188;">
+<img src="Eyes/CLOTH_Oversized Superstar Sunglasses_FRONT.png" class="cloth_front" id="eyes_superstar" style="position: absolute; left: calc(535px - 231px); bottom: calc(3768px - 3000px); z-index: 190;">
+<img src="Eyes/CLOTH_Shades of Self-Destruction_FRONT.png" class="cloth_front" id="eyes_selfdestruction" style="position: absolute; left: calc(547px - 231px); bottom: calc(3749px - 3000px); z-index: 192;">
+<img src="Eyes/CLOTH_Sunglasses Sub-Insulindic Rendezvous_FRONT.png" class="cloth_front" id="eyes_rendezvous" style="position: absolute; left: calc(544px - 231px); bottom: calc(3746px - 3000px); z-index: 194;">
+<img src="Head/CLOTH_Dick Mullen's Hat_FRONT.png" class="cloth_front" id="hat_mullen" style="position: absolute; left: calc(444px - 231px); bottom: calc(3787px - 3000px); z-index: 191;">
+<img src="Head/CLOTH_Fairweather T-500 Helmet_FRONT.png" class="cloth_front" id="hat_t500" style="position: absolute; left: calc(419px - 231px); bottom: calc(3637px - 3000px); z-index: 192;">
+<img src="Head/CLOTH_FALN 'Pipo' Pipo_FRONT.png" class="cloth_front" id="hat_faln" style="position: absolute; left: calc(482px - 231px); bottom: calc(3724px - 3000px); z-index: 193;">
+<img src="Head/CLOTH_Orange Bum Hat_FRONT.png" class="cloth_front" id="hat_bum" style="position: absolute; left: calc(472px - 231px); bottom: calc(3715px - 3000px); z-index: 194;">
+<img src="Head/CLOTH_RCM Lieutenant's Cap_FRONT.png" class="cloth_front" id="hat_rcm" style="position: absolute; left: calc(508px - 231px); bottom: calc(3787px - 3000px); z-index: 195;">
+<img src="Head/CLOTH_Revolutionary's Hat_FRONT.png" class="cloth_front" id="hat_rev" style="position: absolute; left: calc(458px - 231px); bottom: calc(3647px - 3000px); z-index: 196;">
+<img src="Head/CLOTH_Samaran Conical Hat_FRONT.png" class="cloth_front" id="hat_conical" style="position: absolute; left: calc(374px - 231px); bottom: calc(3694px - 3000px); z-index: 197;">
+<img src="Head/CLOTH_Amphibian Sports Visor_FRONT.png" class="cloth_front" id="hat_amphibian_sports_visor" style="position: absolute; left: calc(500px - 231px); bottom: calc(3767px - 3000px); z-index: 198;">
+<img src="Eyes/CLOTH_Sunglasses Sub-Insulindic Rendezvous_BACK.png" class="cloth_back" id="eyes_rendezvous" style="position: absolute; left: calc(509px - 231px); bottom: calc(3738px - 3000px); z-index: 84;">
+<img src="Eyes/CLOTH_Jamrock Biker-Cop Sunnies_BACK.png" class="cloth_back" id="eyes_biker" style="position: absolute; left: calc(519px - 231px); bottom: calc(3747px - 3000px); z-index: 85;">
+<img src="Eyes/CLOTH_Mega-Bino's Prescription Lenses_BACK.png" class="cloth_back" id="eyes_megabino" style="position: absolute; left: calc(518px - 231px); bottom: calc(3753px - 3000px); z-index: 86;">
+<img src="Eyes/CLOTH_Oversized Superstar Sunglasses_BACK.png" class="cloth_back" id="eyes_superstar" style="position: absolute; left: calc(505px - 231px); bottom: calc(3745px - 3000px); z-index: 87;">
+<img src="Eyes/CLOTH_Shades of Self-Destruction_BACK.png" class="cloth_back" id="eyes_selfdestruction" style="position: absolute; left: calc(513px - 231px); bottom: calc(3746px - 3000px); z-index: 88;">
+<img src="Head/CLOTH_Revolutionary's Hat_FRONT_BG.png" class="cloth_front" id="hat_rev" style="position: absolute; left: calc(624px - 231px); bottom: calc(3647px - 3000px); z-index: 199;">
+<img src="Jacket/CLOTH_Disco-Ass Blazer_FRONT_BG.png" class="cloth_front" id="jacket_disco" style="position: absolute; left: calc(682px - 231px); bottom: calc(2977px - 3000px); z-index: 153;">
+<img src="Jacket/CLOTH_FRITTTE Plastic Rain Coat_BACK_FG.png" class="cloth_back" id="jacket_rain" style="position: absolute; left: calc(504px - 231px); bottom: calc(3508px - 3000px); z-index: 56;">
+<img src="Jacket/CLOTH_Leather Jacket Fuck the World_BACK_FG.png" class="cloth_back" id="jacket_fuck" style="position: absolute; left: calc(512px - 231px); bottom: calc(3602px - 3000px); z-index: 60;">
+<img src="Jacket/CLOTH_Leather Jacket Pissflaubert_BACK_FG.png" class="cloth_back" id="jacket_piss" style="position: absolute; left: calc(513px - 231px); bottom: calc(3603px - 3000px); z-index: 64;">
+<img src="Jacket/CLOTH_FALN 'Faln' Windbreaker_BACK_FG.png" class="cloth_back" id="jacket_faln" style="position: absolute; left: calc(513px - 231px); bottom: calc(3516px - 3000px); z-index: 54;">
+<img src="Jacket/CLOTH_Signal-Blue Naval Coat_BACK_FG.png" class="cloth_back" id="jacket_naval" style="position: absolute; left: calc(481px - 231px); bottom: calc(3608px - 3000px); z-index: 72;">
+<img src="Shirt/CLOTH_Fairweather T-500 Cuirass_BACK_FG.png" class="cloth_back" id="shirt_t500" style="position: absolute; left: calc(354px - 231px); bottom: calc(3049px - 3000px); z-index: 32;">
+<img src="Shirt/CLOTH_Fairweather T-500 Cuirass_BACK_FG2.png" class="cloth_back" id="shirt_t500" style="position: absolute; left: calc(363px - 231px); bottom: calc(3039px - 3000px); z-index: 31;">
+<img src="Shirt/CLOTH_Fairweather T-500 Cuirass_FRONT_COLLAR.png" class="cloth_front" id="shirt_t500" style="position: absolute; left: calc(524px - 231px); bottom: calc(3507px - 3000px); z-index: 142;">
+<img src="Shirt/CLOTH_Fairweather T-500 Cuirass_FRONT_FG2.png" class="cloth_front" id="shirt_t500" style="position: absolute; left: calc(269px - 231px); bottom: calc(3017px - 3000px); z-index: 140;">
+<img src="Shirt/CLOTH_Fairweather T-500 Cuirass_FRONT_FG1.png" class="cloth_front" id="shirt_t500" style="position: absolute; left: calc(644px - 231px); bottom: calc(3066px - 3000px); z-index: 141;">
+<img src="Jacket/CLOTH_Party Dragon's Silk Robe_FRONT_BG.png" class="cloth_front" id="jacket_dragon" style="position: absolute; left: calc(474px - 231px); bottom: calc(3378px - 3000px); z-index: 165;">
+<img src="Jacket/CLOTH_Party Dragon's Silk Robe_BACK_BG.png" class="cloth_back" id="jacket_dragon" style="position: absolute; left: calc(389px - 231px); bottom: calc(3359px - 3000px); z-index: 66;">
+<img src="Jacket/CLOTH_FALN 'Faln' Windbreaker_FRONT_COLLAR.png" class="cloth_front" id="jacket_faln" style="position: absolute; left: calc(434px - 231px); bottom: calc(3509px - 3000px); z-index: 157;">
+<img src="Jacket/CLOTH_FRITTTE Plastic Rain Coat_FRONT_COLLAR.png" class="cloth_front" id="jacket_rain" style="position: absolute; left: calc(455px - 231px); bottom: calc(3429px - 3000px); z-index: 159;">
+<!--<img src="Jacket/CLOTH_Leather Jacket Fuck the World_FRONT_COLLAR.png" class="cloth_front" style="position: absolute; left: calc(882px - 231px); bottom: calc(2702px - 3000px); z-index: 134;">-->
+<!--<img src="Jacket/CLOTH_Leather Jacket Pissflaubert_FRONT_COLLAR.png" class="cloth_front" style="position: absolute; left: calc(865px - 231px); bottom: calc(2659px - 3000px); z-index: 136;">-->
+<img src="Jacket/CLOTH_Dynamic Winderbreaker Surf_FRONT_COLLAR.png" class="cloth_front" id="jacket_surf" style="position: absolute; left: calc(412px - 231px); bottom: calc(3407px - 3000px); z-index: 155;">
+<img src="Jacket/CLOTH_Signal-Blue Naval Coat_FRONT_COLLAR.png" class="cloth_front" id="jacket_naval" style="position: absolute; left: calc(407px - 231px); bottom: calc(3451px - 3000px); z-index: 172;">
+<img src="Hands/CLOTH_Fairweather T-500 Gauntlets_FRONT_BG.png" class="cloth_front" id="gloves_t500" style="position: absolute; left: calc(707px - 231px); bottom: calc(2926px - 3000px); z-index: 131;">
+<img src="Hands/CLOTH_FALN 'Ultra' Series Gloves_FRONT_BG.png" class="cloth_front" id="gloves_faln" style="position: absolute; left: calc(710px - 231px); bottom: calc(2959px - 3000px); z-index: 133;">
+<img src="Hands/CLOTH_Fingerless Gloves_FRONT_BG.png" class="cloth_front" id="gloves_bum" style="position: absolute; left: calc(711px - 231px); bottom: calc(2965px - 3000px); z-index: 135;">
+<img src="Hands/CLOTH_Yellow Gardening Gloves_FRONT_BG.png" class="cloth_front" id="gloves_garden" style="position: absolute; left: calc(711px - 231px); bottom: calc(2943px - 3000px); z-index: 137;">
+<img src="Hands/CLOTH_Fairweather T-500 Gauntlets_BACK_BG.png" class="cloth_back" id="gloves_t500" style="position: absolute; left: calc(775px - 231px); bottom: calc(2932px - 3000px); z-index: 43;">
+<img src="Hands/CLOTH_FALN 'Ultra' Series Gloves_BACK_BG.png" class="cloth_back" id="gloves_faln" style="position: absolute; left: calc(785px - 231px); bottom: calc(2942px - 3000px); z-index: 45;">
+<img src="Hands/CLOTH_Fingerless Gloves_BACK_BG.png" class="cloth_back" id="gloves_bum" style="position: absolute; left: calc(789px - 231px); bottom: calc(2964px - 3000px); z-index: 47;">
+<img src="Hands/CLOTH_Yellow Gardening Gloves_BACK_BG.png" class="cloth_back" id="gloves_garden" style="position: absolute; left: calc(778px - 231px); bottom: calc(2929px - 3000px); z-index: 49;">
+<!--<img src="Jacket/CLOTH_Leather Jacket Fuck the World_FRONT_BG.png" class="cloth_front" style="position: absolute; left: calc(1450px - 231px); bottom: calc(2008px - 3000px); z-index: 143;">-->
+<img src="Feet/CLOTH_Fairweather T-500 Greaves_BACK_MASK.png" class="cloth_back cloth_mask" id="shoes_t500" style="position: absolute; left: calc(259px - 231px); bottom: calc(2227px - 3000px); z-index: 8;">
+<img src="Feet/CLOTH_Fairweather T-500 Greaves_FRONT_MASK.png" class="cloth_front cloth_mask" id="shoes_t500" style="position: absolute; left: calc(354px - 231px); bottom: calc(2244px - 3000px); z-index: 119;">
+<img src="Feet/CLOTH_Franconigerian Cavalry Boots_FRONT_MASK.png" class="cloth_front cloth_mask" id="shoes_cavalry" style="position: absolute; left: calc(423px - 231px); bottom: calc(2215px - 3000px); z-index: 108;">
+<img src="Feet/CLOTH_Franconigerian Cavalry Boots_BACK_MASK.png" class="cloth_back cloth_mask" id="shoes_cavalry" style="position: absolute; left: calc(324px - 231px); bottom: calc(2257px - 3000px); z-index: 12;">
+<img src="Feet/CLOTH_FALN 'Ultra' Series Sneakers_BACK_MASK.png" class="cloth_back cloth_mask" id="shoes_faln" style="position: absolute; left: calc(406px - 231px); bottom: calc(2311px - 3000px); z-index: 9;">
+<img src="Feet/CLOTH_FALN 'Ultra' Series Sneakers_FRONT_MASK.png" class="cloth_front cloth_mask" id="shoes_faln" style="position: absolute; left: calc(496px - 231px); bottom: calc(2247px - 3000px); z-index: 106;">
+<img src="Feet/CLOTH_Speedfreaks DONKS_BACK_MASK.png" class="cloth_back cloth_mask" id="shoes_donks" style="position: absolute; left: calc(307px - 231px); bottom: calc(2252px - 3000px); z-index: 16;">
+<img src="Feet/CLOTH_Speedfreaks DONKS_FRONT_MASK.png" class="cloth_front cloth_mask" id="shoes_donks" style="position: absolute; left: calc(498px - 231px); bottom: calc(2248px - 3000px); z-index: 113;">
+<img src="Feet/CLOTH_Green shoe (left foot)_FRONT_MASK.png" class="cloth_front cloth_mask" id="shoes_snakeskin_left" style="position: absolute; left: calc(727px - 231px); bottom: calc(2257px - 3000px); z-index: 115;">
+<!--<img src="Feet/CLOTH_Green shoe (right foot)_FRONT_BG.png" class="cloth_front" style="position: absolute; left: calc(1083px - 231px); bottom: calc(541px - 3000px); z-index: 109;">-->
+<img src="Feet/CLOTH_Green shoe (right foot)_FRONT_MASK.png" class="cloth_front cloth_mask" id="shoes_snakeskin_right" style="position: absolute; left: calc(485px - 231px); bottom: calc(2242px - 3000px); z-index: 117;">
+<img src="Feet/CLOTH_Green shoe (left foot)_BACK_MASK.png" class="cloth_back cloth_mask" id="shoes_snakeskin_left" style="position: absolute; left: calc(315px - 231px); bottom: calc(2256px - 3000px); z-index: 18;">
+<img src="Feet/CLOTH_Mesque Banger's Red Brogues_FRONT_MASK.png" class="cloth_front cloth_mask" id="shoes_snakeskin_red" style="position: absolute; left: calc(522px - 231px); bottom: calc(2242px - 3000px); z-index: 111;">
+<img src="Neck/CLOTH_Army Surplus Winter Scarf_BACK_BG.png" class="cloth_back" id="neck_army" style="position: absolute; left: calc(498px - 231px); bottom: calc(3572px - 3000px); z-index: 81;">
+<img src="Neck/CLOTH_Mesque Banger's Silk Scarf_BACK_BG.png" class="cloth_back" id="neck_banger" style="position: absolute; left: calc(498px - 231px); bottom: calc(3572px - 3000px); z-index: 78;">
+<img src="Shirt/CLOTH_FALN 'Arrower' Shirt_FRONT_FLIPPED.png" class="cloth_front cloth_flipped" id="shirt_faln" style="position: absolute; left: calc(285px - 231px); bottom: calc(3020px - 3000px); z-index: 150;">
+<img src="Shirt/CLOTH_FALN 'Arrower' Shirt_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="shirt_faln" style="position: absolute; left: calc(424px - 231px); bottom: calc(3051px - 3000px); z-index: 34;">
+<img src="Pants/CLOTH_FALN 'Modular' Track Pants_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="pants_faln" style="position: absolute; left: calc(418px - 231px); bottom: calc(2508px - 3000px); z-index: 22;">
+<img src="Pants/CLOTH_FALN 'Modular' Track Pants_FRONT_FLIPPED.png" class="cloth_front cloth_flipped" id="pants_faln" style="position: absolute; left: calc(413px - 231px); bottom: calc(2530px - 3000px); z-index: 122;">
+<img src="Jacket/CLOTH_Leather Jacket Fuck the World_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="jacket_fuck" style="position: absolute; left: calc(355px - 231px); bottom: calc(2928px - 3000px); z-index: 61;">
+<img src="Jacket/CLOTH_Leather Jacket Pissflaubert_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="jacket_piss" style="position: absolute; left: calc(355px - 231px); bottom: calc(2926px - 3000px); z-index: 63;">
+<!--<img src="Clothing/CLOTH_Shirt_FRONT.png" class="cloth_front" style="position: absolute; left: calc(306px - 231px); bottom: calc(3064px - 3000px); z-index: 151;">-->
+<img src="Jacket/CLOTH_Signal-Blue Naval Coat_FRONT_BG.png" class="cloth_front" id="jacket_naval" style="position: absolute; left: calc(464px - 231px); bottom: calc(3556px - 3000px); z-index: 171;">
+<img src="Eyes/CLOTH_Jamrock Biker-Cop Sunnies_FRONT_FG.png" class="cloth_front" id="eyes_biker" style="position: absolute; left: calc(659px - 231px); bottom: calc(3748px - 3000px); z-index: 187;">
+<img src="Eyes/CLOTH_Mega-Bino's Prescription Lenses_FRONT_FG.png" class="cloth_front" id="eyes_megabino" style="position: absolute; left: calc(654px - 231px); bottom: calc(3745px - 3000px); z-index: 189;">
+<img src="Eyes/CLOTH_Oversized Superstar Sunglasses_FRONT_FG.png" class="cloth_front" id="eyes_superstar" style="position: absolute; left: calc(583px - 231px); bottom: calc(3741px - 3000px); z-index: 191;">
+<img src="Eyes/CLOTH_Shades of Self-Destruction_FRONT_FG.png" class="cloth_front" id="eyes_selfdestruction" style="position: absolute; left: calc(652px - 231px); bottom: calc(3751px - 3000px); z-index: 193;">
+<img src="Eyes/CLOTH_Sunglasses Sub-Insulindic Rendezvous_FRONT_FG.png" class="cloth_front" id="eyes_rendezvous" style="position: absolute; left: calc(653px - 231px); bottom: calc(3745px - 3000px); z-index: 195;">
+</div>
