@@ -40,10 +40,16 @@
             el.style.display = "none";
         });
     }
+
+document.addEventListener("DOMContentLoaded", function() {
+    StripClothes();
+});
 </script>
 
 <div class="controls">
-<button class="button_shoes" onclick="StripClothes()">Strip</button>
+<button class="button_misc" onclick="StripClothes()">Strip</button>
+
+<button class="button_hair" onclick="ToggleClothes('harry_head')">Facial Hair</button>
 
 <button class="button_shoes" onclick="ToggleClothes('shoes_t500')">T-500</button>
 <button class="button_shoes" onclick="ToggleClothes('shoes_faln')">Faln</button>
@@ -124,10 +130,10 @@
 <img src="HarryDoll/Harry_Doll_Front_Unshaved_Head.png" class="head_front" style="position: absolute; left: calc(245px - 231px); bottom: calc(1821px - 3000px); z-index: 13;">
 -->
 <!-- Harry Head -->
-<img src="HarryDoll/Harry_Doll_Back_Shaved_Head.png" class="head_back harry" style="position: absolute; left: calc(534px - 231px); bottom: calc(3625px - 3000px); z-index: 4;">
-<img src="HarryDoll/Harry_Doll_Back_Unshaved_Head.png" class="head_back harry" style="position: absolute; left: calc(522px - 231px); bottom: calc(3625px - 3000px); z-index: 5;">
-<img src="HarryDoll/Harry_Doll_Front_Shaved_Head.png" class="head_front harry" style="position: absolute; left: calc(489px - 231px); bottom: calc(3643px - 3000px); z-index: 8;">
-<img src="HarryDoll/Harry_Doll_Front_Unshaved_Head.png" class="head_front harry" style="position: absolute; left: calc(489px - 231px); bottom: calc(3643px - 3000px); z-index: 9;">
+<img src="HarryDoll/Harry_Doll_Back_Shaved_Head.png" class="head_back harry" id="harry_head" style="display: none; position: absolute; left: calc(534px - 231px); bottom: calc(3625px - 3000px); z-index: 4;">
+<img src="HarryDoll/Harry_Doll_Back_Unshaved_Head.png" class="head_back harry" id="harry_head" style="position: absolute; left: calc(522px - 231px); bottom: calc(3625px - 3000px); z-index: 5;">
+<img src="HarryDoll/Harry_Doll_Front_Shaved_Head.png" class="head_front harry" id="harry_head" style="display: none; position: absolute; left: calc(489px - 231px); bottom: calc(3643px - 3000px); z-index: 8;">
+<img src="HarryDoll/Harry_Doll_Front_Unshaved_Head.png" class="head_front harry" id="harry_head" style="position: absolute; left: calc(489px - 231px); bottom: calc(3643px - 3000px); z-index: 9;">
 <!-- Clothing -->
 <img src="Feet/CLOTH_Fairweather T-500 Greaves_BACK.png" class="cloth_back" id="shoes_t500" style="position: absolute; left: calc(328px - 231px); bottom: calc(2263px - 3000px); z-index: 7;">
 <img src="Feet/CLOTH_FALN 'Ultra' Series Sneakers_BACK.png" class="cloth_back" id="shoes_faln" style="position: absolute; left: calc(315px - 231px); bottom: calc(2271px - 3000px); z-index: 10;">
@@ -172,7 +178,7 @@
 <img src="Jacket/CLOTH_Signal-Blue Naval Coat_BACK.png" class="cloth_back" id="jacket_naval" style="position: absolute; left: calc(328px - 231px); bottom: calc(2574px - 3000px); z-index: 71;">
 <img src="Neck/CLOTH_Eight-Eyed Teratorn Tie_BACK.png" class="cloth_back" id="neck_teratorn" style="position: absolute; left: calc(573px - 231px); bottom: calc(3621px - 3000px); z-index: 74;">
 <img src="Neck/CLOTH_Horrific Necktie_BACK.png" class="cloth_back" id="neck_horrific" style="position: absolute; left: calc(566px - 231px); bottom: calc(3605px - 3000px); z-index: 75;">
-<img src="Neck/CLOTH_Medal The Setting Sun_BACK.png" class="cloth_back" id="neck_medal" style="position: absolute; left: calc(377px - 231px); bottom: calc(3514px - 3000px); z-index: 76;">
+<!--<img src="Neck/CLOTH_Medal The Setting Sun_BACK.png" class="cloth_back" id="neck_medal" style="position: absolute; left: calc(377px - 231px); bottom: calc(3514px - 3000px); z-index: 76;">-->
 <img src="Neck/CLOTH_Mesque Banger's Silk Scarf_BACK.png" class="cloth_back" id="neck_banger" style="position: absolute; left: calc(498px - 231px); bottom: calc(3582px - 3000px); z-index: 77;">
 <img src="Neck/CLOTH_Scented Scarf_BACK.png" class="cloth_back" id="neck_scent" style="position: absolute; left: calc(569px - 231px); bottom: calc(3598px - 3000px); z-index: 79;">
 <img src="Neck/CLOTH_Army Surplus Winter Scarf_BACK.png" class="cloth_back" id="neck_army" style="position: absolute; left: calc(498px - 231px); bottom: calc(3585px - 3000px); z-index: 80;">
@@ -298,12 +304,12 @@
 <img src="Feet/CLOTH_Mesque Banger's Red Brogues_FRONT_MASK.png" class="cloth_front cloth_mask" id="shoes_snakeskin_red" style="position: absolute; left: calc(522px - 231px); bottom: calc(2242px - 3000px); z-index: 111;">
 <img src="Neck/CLOTH_Army Surplus Winter Scarf_BACK_BG.png" class="cloth_back" id="neck_army" style="position: absolute; left: calc(498px - 231px); bottom: calc(3572px - 3000px); z-index: 81;">
 <img src="Neck/CLOTH_Mesque Banger's Silk Scarf_BACK_BG.png" class="cloth_back" id="neck_banger" style="position: absolute; left: calc(498px - 231px); bottom: calc(3572px - 3000px); z-index: 78;">
-<img src="Shirt/CLOTH_FALN 'Arrower' Shirt_FRONT_FLIPPED.png" class="cloth_front cloth_flipped" id="shirt_faln" style="position: absolute; left: calc(285px - 231px); bottom: calc(3020px - 3000px); z-index: 150;">
-<img src="Shirt/CLOTH_FALN 'Arrower' Shirt_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="shirt_faln" style="position: absolute; left: calc(424px - 231px); bottom: calc(3051px - 3000px); z-index: 34;">
-<img src="Pants/CLOTH_FALN 'Modular' Track Pants_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="pants_faln" style="position: absolute; left: calc(418px - 231px); bottom: calc(2508px - 3000px); z-index: 22;">
-<img src="Pants/CLOTH_FALN 'Modular' Track Pants_FRONT_FLIPPED.png" class="cloth_front cloth_flipped" id="pants_faln" style="position: absolute; left: calc(413px - 231px); bottom: calc(2530px - 3000px); z-index: 122;">
-<img src="Jacket/CLOTH_Leather Jacket Fuck the World_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="jacket_fuck" style="position: absolute; left: calc(355px - 231px); bottom: calc(2928px - 3000px); z-index: 61;">
-<img src="Jacket/CLOTH_Leather Jacket Pissflaubert_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="jacket_piss" style="position: absolute; left: calc(355px - 231px); bottom: calc(2926px - 3000px); z-index: 63;">
+<!--<img src="Shirt/CLOTH_FALN 'Arrower' Shirt_FRONT_FLIPPED.png" class="cloth_front cloth_flipped" id="shirt_faln" style="position: absolute; left: calc(285px - 231px); bottom: calc(3020px - 3000px); z-index: 150;">-->
+<!--<img src="Shirt/CLOTH_FALN 'Arrower' Shirt_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="shirt_faln" style="position: absolute; left: calc(424px - 231px); bottom: calc(3051px - 3000px); z-index: 34;">-->
+<!--<img src="Pants/CLOTH_FALN 'Modular' Track Pants_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="pants_faln" style="position: absolute; left: calc(418px - 231px); bottom: calc(2508px - 3000px); z-index: 22;">-->
+<!--<img src="Pants/CLOTH_FALN 'Modular' Track Pants_FRONT_FLIPPED.png" class="cloth_front cloth_flipped" id="pants_faln" style="position: absolute; left: calc(413px - 231px); bottom: calc(2530px - 3000px); z-index: 122;">-->
+<!--<img src="Jacket/CLOTH_Leather Jacket Fuck the World_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="jacket_fuck" style="position: absolute; left: calc(355px - 231px); bottom: calc(2928px - 3000px); z-index: 61;">-->
+<!--<img src="Jacket/CLOTH_Leather Jacket Pissflaubert_BACK_FLIPPED.png" class="cloth_back cloth_flipped" id="jacket_piss" style="position: absolute; left: calc(355px - 231px); bottom: calc(2926px - 3000px); z-index: 63;">-->
 <!--<img src="Clothing/CLOTH_Shirt_FRONT.png" class="cloth_front" style="position: absolute; left: calc(306px - 231px); bottom: calc(3064px - 3000px); z-index: 151;">-->
 <img src="Jacket/CLOTH_Signal-Blue Naval Coat_FRONT_BG.png" class="cloth_front" id="jacket_naval" style="position: absolute; left: calc(464px - 231px); bottom: calc(3556px - 3000px); z-index: 171;">
 <img src="Eyes/CLOTH_Jamrock Biker-Cop Sunnies_FRONT_FG.png" class="cloth_front" id="eyes_biker" style="position: absolute; left: calc(659px - 231px); bottom: calc(3748px - 3000px); z-index: 187;">
